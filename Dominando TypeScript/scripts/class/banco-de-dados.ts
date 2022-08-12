@@ -1,4 +1,4 @@
-import { IBancoDeDados } from "../classes/banco-de-dados";
+import { IBancoDeDados } from "../interface/banco-de-dados";
 
 export class BandoDeDados {
     static LOCAL = "localhost";
@@ -6,10 +6,10 @@ export class BandoDeDados {
     static TIPO_SQLSERVER = "SQL Server";
 
     constructor(
-        private ip: string,
-        private usuario: string,
-        private senha: string,
-        private tipoBanco: string,
+        private _ip: string,
+        private _usuario: string,
+        private _senha: string,
+        private _tipoBanco: string,
     ) { }
 
     static factory(parametros: IBancoDeDados): BandoDeDados {

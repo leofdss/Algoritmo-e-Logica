@@ -1,4 +1,4 @@
-import { BandoDeDados } from "./interfaces/ibanco-de-dados";
+import { BandoDeDados } from "./class/banco-de-dados";
 
 const conexaoBanco: BandoDeDados = BandoDeDados.factory({
     ip: BandoDeDados.LOCAL,

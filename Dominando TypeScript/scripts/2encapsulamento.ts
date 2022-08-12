@@ -44,13 +44,13 @@ const domicilio = new Domicilio("azul");
 // private
 
 class Banco {
-    private cofreQtd: number = 10000; // TS
+    private _cofreQtd: number = 10000; // TS
     #cofreQtd2: number = 10000; // ECMAScript
 
     private debitarCofre(quantidade: number) {
-        if(this.cofreQtd >= quantidade) {
-            this.cofreQtd -= quantidade;
-            return this.cofreQtd;
+        if(this._cofreQtd >= quantidade) {
+            this._cofreQtd -= quantidade;
+            return this._cofreQtd;
         } else {
             return "O cofre não possui a quantidade requisitada";
         }
@@ -79,6 +79,6 @@ console.log(banco.sacar(100));
 class Usuario {
     readonly id: string = 'asdasdsad123';
     nome: string = "Joao";
-    private senha = "aasdasdasd";
+    private _senha = "aasdasdasd";
     readonly dataCadastro: Date = new Date("2021-01-01");
 }
